@@ -14,3 +14,4 @@ export default function WhatsAppFab() {
       </a>
     </aside>
   );
+}
