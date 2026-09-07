@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+@import "tailwindcss";
+
+/* 1. Añadimos los plugins de Tailwind v4 */
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/container-queries";
+
+/* 2. Configuramos el tema personalizado nativo de v4 */
+@theme {
+  /* Colores principales usados en tu landing */
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #eff4ff;
+  --color-on-surface: #0b1c30;
+  --color-primary: #9d4300;
+  --color-primary-container: #f97316;
+  --color-on-primary-container: #582200;
+  --color-secondary: #565e74;
+  --color-tertiary: #006d2f;
+  --color-tertiary-container: #00b251;
+  --color-on-tertiary: #ffffff;
+  --color-outline: #8c7164;
+  --color-outline-variant: #e0c0b1;
+  --color-inverse-surface: #213145;
+  --color-inverse-on-surface: #eaf1ff;
+  --color-primary-fixed: #ffdbca;
+  --color-secondary-fixed-dim: #bec6e0;
+  --color-tertiary-fixed: #66ff8e;
+
+  /* Espaciados personalizados */
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-space-3xl: 4rem;
+  --spacing-space-4xl: 6rem;
+  --spacing-gutter-mobile: 1.25rem;
+  --spacing-gutter-desktop: 2rem;
+  --spacing-container-max: 78rem;
+
+  /* Tipografías */
+  --font-body-default: "Plus Jakarta Sans", sans-serif;
+  --font-body-lead: "Plus Jakarta Sans", sans-serif;
+  --font-body-sm: "Plus Jakarta Sans", sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", sans-serif;
+  --font-headline-xl: "Plus Jakarta Sans", sans-serif;
+  --font-label-btn: "Plus Jakarta Sans", sans-serif;
+  --font-mono-eyebrow: "JetBrains Mono", monospace;
+  --font-mono-metric: "JetBrains Mono", monospace;
+  --font-display-hero: "Plus Jakarta Sans", sans-serif;
+  --font-display-hero-mobile: "Plus Jakarta Sans", sans-serif;
+
+  /* Tamaños de fuente personalizados (Tamaño / Line Height) */
+  --text-mono-eyebrow: 0.8125rem;
+  --text-mono-eyebrow--line-height: 1.2;
+  --text-label-btn: 0.9375rem;
+  --text-headline-md: 1.5rem;
+  --text-mono-metric: 1.75rem;
+  --text-display-hero-mobile: 2.75rem;
+  --text-display-hero: 4.5rem;
+}
+
+/* 3. Tus clases de sombra utilitarias */
+@layer utilities {
+  .tactile-shadow { box-shadow: 3px 3px 0px #0b1c30; }
+  .tactile-shadow-sm { box-shadow: 2px 2px 0px #0b1c30; }
+  .tactile-shadow-lg { box-shadow: 4px 4px 0px #0b1c30; }
+}
+
+/* 4. Estilos globales del cuerpo */
+body {
+  @apply bg-surface-container-lowest text-on-surface font-body-default antialiased selection:bg-primary-container selection:text-on-tertiary scroll-smooth;
+}
+}
