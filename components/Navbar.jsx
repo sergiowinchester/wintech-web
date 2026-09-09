@@ -4,7 +4,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center w-full max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop h-20">
         <a className="flex items-center gap-space-xs text-headline-md font-headline-md font-extrabold text-on-surface dark:text-inverse-on-surface tracking-tight group" href="#inicio">
           <div className="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-tertiary shadow-sm transition-transform group-hover:scale-105">
-          <span className="material-symbols-outlined">terminal</span>          
+            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>terminal</span>
           </div>
           <span>Wintech</span>
         </a>

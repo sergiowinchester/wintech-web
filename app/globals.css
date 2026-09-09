@@ -8,7 +8,7 @@
 
 /* 2. Configuramos el tema personalizado nativo de v4 */
 @theme {
-  /* Colores principales*/
+  /* Colores principales usados en tu landing */
   --color-surface-container-lowest: #ffffff;
   --color-surface-container-low: #eff4ff;
   --color-on-surface: #0b1c30;

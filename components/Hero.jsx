@@ -44,7 +44,7 @@ export default function Hero() {
         </div>
         <div className="lg:col-span-5 relative">
           <div className="relative bg-surface-container-lowest border border-outline-variant p-2 rounded-xl tactile-shadow-lg">
-            <img className="w-full h-80 md:h-[420px] object-cover rounded-lg" alt="Creative web development agency team" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChdOA5xFTbkyXNUsSkO2wi_H_GZY2ydYxOv9j_srcbfwjlbSorfwv0fQMmst74GEcVxrA6_mTM0wzvJF3m7rsuxtceNT8oL2zGZjVbuV40evUWubAaZLVeIOwy8gYX4rKTVk6_pSi9PnKhoOdSISyw_W3qdkTCSimPFqLIKMjcu2P272lqNu3ErKlxHDqQZy2JalvEiRAsUoGee8mUmwealnO-DdQt3U6TPhd4GxR-ywF1Zt3YxuMdjA" />
+            <img className="w-full h-80 md:h-[420px] object-cover rounded-lg" alt="Creative web development agency team" src="/images/hero-photo.webp" />
             <div className="absolute -bottom-5 -left-4 bg-surface-container-lowest border border-outline-variant p-3.5 rounded-xl tactile-shadow max-w-xs hidden sm:block">
               <div className="flex items-center gap-2.5 mb-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-tertiary-container animate-pulse"></div>

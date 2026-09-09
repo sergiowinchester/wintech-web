@@ -1,6 +1,34 @@
+'use client';
+import { useEffect, useRef, useState } from 'react';
+
 export default function Benefits() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className="w-full max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop py-space-3xl md:py-space-4xl" id="beneficios">
+    <section ref={sectionRef} className="w-full max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop py-space-3xl md:py-space-4xl" id="beneficios">
       <div className="max-w-2xl mb-space-2xl">
         <span className="font-mono-eyebrow text-mono-eyebrow text-primary uppercase tracking-wider">Rendimiento Operativo</span>
         <h2 className="font-headline-lg md:font-headline-xl text-headline-lg md:text-headline-xl text-on-surface mt-1">
@@ -10,11 +38,12 @@ export default function Benefits() {
           Métricas calculadas sobre despliegues activos en negocios locales y empresas de servicios.
         </p>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
-        {/* Card 1 */}
-        <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg tactile-shadow-sm flex flex-col justify-between">
+        {/* Card 1: Barra de progreso dinámica */}
+        <div className="group bg-surface-container-lowest border border-outline-variant rounded-xl p-space-xl tactile-shadow-sm flex flex-col justify-between hover:border-primary-container transition-all duration-300">
           <div>
-            <div className="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary-container mb-space-md">
+            <div className="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary-container mb-space-md group-hover:scale-110 transition-transform">
               <span className="material-symbols-outlined">schedule</span>
             </div>
             <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2">Ahorro de 80% en tiempo de atención al cliente</h3>
@@ -28,7 +57,9 @@ export default function Benefits() {
               <span className="text-primary font-bold">80% Reducción</span>
             </div>
             <div className="w-full bg-slate-200 h-3 rounded-full overflow-hidden flex">
-              <div className="bg-primary-container h-full rounded-full transition-all duration-500" style={{ width: "80%" }}></div>
+              <div 
+                className={`bg-primary-container h-full rounded-full transition-all duration-5000 ease-out ${isVisible ? 'w-[80%]' : 'w-0'}`}
+              ></div>
             </div>
             <div className="flex justify-between text-[11px] text-secondary font-mono-eyebrow mt-2">
               <span>Manual: 100% carga</span>
@@ -37,10 +68,10 @@ export default function Benefits() {
           </div>
         </div>
 
-        {/* Card 2 */}
-        <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg tactile-shadow-sm flex flex-col justify-between">
+        {/* Card 2: Barra vertical que sube al entrar */}
+        <div className="group bg-surface-container-lowest border border-outline-variant rounded-xl p-space-xl tactile-shadow-sm flex flex-col justify-between hover:border-primary-container transition-all duration-300">
           <div>
-            <div className="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-tertiary mb-space-md">
+            <div className="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-tertiary mb-space-md group-hover:scale-110 transition-transform">
               <span className="material-symbols-outlined">trending_up</span>
             </div>
             <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2">Aumento del triple (3x) en captura de leads</h3>
@@ -49,26 +80,26 @@ export default function Benefits() {
             </p>
           </div>
           <div className="bg-surface-container-low p-4 rounded-xl border border-outline-variant/60">
-            <div className="text-xs font-mono-eyebrow text-secondary mb-3">Tasa de retención de prospectos:</div>
-            <div className="flex items-end gap-6 h-24 pt-2 pb-1 justify-around border-b border-outline-variant/80">
-              <div className="flex flex-col items-center gap-1.5 w-1/3">
+            <div className="text-xs font-mono-eyebrow text-secondary mb-5">Tasa de retención de prospectos:</div>
+            <div className="flex items-end gap-4 h-28 pt-2 pb-1 justify-around border-b border-outline-variant/80">
+              <div className="flex flex-col items-center gap-1 w-1/3">
                 <span className="text-xs font-mono-eyebrow text-secondary">1x Base</span>
                 <div className="w-full bg-secondary-fixed-dim h-8 rounded-t"></div>
                 <span className="text-[11px] text-secondary font-mono-eyebrow">Antes</span>
               </div>
-              <div className="flex flex-col items-center gap-1.5 w-1/3">
+              <div className="flex flex-col items-center gap-1 w-1/3">
                 <span className="text-xs font-mono-eyebrow text-primary-container font-bold">3x Leads</span>
-                <div className="w-full bg-primary-container h-20 rounded-t"></div>
+                <div className={`w-full bg-primary-container rounded-t transition-all duration-5000 ease-out ${isVisible ? 'h-20' : 'h-8'}`}></div>
                 <span className="text-[11px] text-on-surface font-semibold font-mono-eyebrow">Con Wintech</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Card 3 */}
-        <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg tactile-shadow-sm flex flex-col justify-between">
+        {/* Card 3: Indicador de velocidad con pulso condicional */}
+        <div className="group bg-surface-container-lowest border border-outline-variant rounded-xl p-space-xl tactile-shadow-sm flex flex-col justify-between hover:border-tertiary transition-all duration-300">
           <div>
-            <div className="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary-container mb-space-md">
+            <div className="w-10 h-10 rounded-lg bg-surface-container-low border border-outline-variant flex items-center justify-center text-primary-container mb-space-md group-hover:scale-110 transition-transform">
               <span className="material-symbols-outlined">bolt</span>
             </div>
             <h3 className="font-headline-sm text-headline-sm text-on-surface mb-2">100% de consultas atendidas al instante</h3>
@@ -79,10 +110,10 @@ export default function Benefits() {
           <div className="bg-surface-container-low p-4 rounded-xl border border-outline-variant/60 flex items-center justify-between">
             <div>
               <div className="text-xs font-mono-eyebrow text-secondary">Tiempo promedio de respuesta</div>
-              <div className="font-mono-metric text-mono-metric text-tertiary font-extrabold mt-0.5">&lt; 3 segundos</div>
+              <div className={`font-mono-metric text-mono-metric text-tertiary font-extrabold mt-0.5 ${isVisible ? 'animate-pulse' : ''}`}>&lt; 3 segundos</div>
               <div className="text-[11px] text-secondary">vs. 45 min promedio en canales tradicionales</div>
             </div>
-            <div className="w-12 h-12 rounded-full border-2 border-dashed border-tertiary flex items-center justify-center text-tertiary">
+            <div className={`w-12 h-12 rounded-full border-2 border-dashed border-tertiary flex items-center justify-center text-tertiary transition-transform duration-700 ${isVisible ? 'rotate-45' : 'rotate-0'}`}>
               <span className="material-symbols-outlined text-xl">speed</span>
             </div>
           </div>
