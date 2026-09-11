@@ -63,7 +63,7 @@ export default function Benefits() {
             </div>
             <div className="flex justify-between text-[11px] text-secondary font-mono-eyebrow mt-2">
               <span>Manual: 100% carga</span>
-              <span>Con Wintech: 20% carga</span>
+              <span>Con winweb: 20% carga</span>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ export default function Benefits() {
               <div className="flex flex-col items-center gap-1 w-1/3">
                 <span className="text-xs font-mono-eyebrow text-primary-container font-bold">3x Leads</span>
                 <div className={`w-full bg-primary-container rounded-t transition-all duration-5000 ease-out ${isVisible ? 'h-20' : 'h-8'}`}></div>
-                <span className="text-[11px] text-on-surface font-semibold font-mono-eyebrow">Con Wintech</span>
+                <span className="text-[11px] text-on-surface font-semibold font-mono-eyebrow">Con winweb</span>
               </div>
             </div>
           </div>

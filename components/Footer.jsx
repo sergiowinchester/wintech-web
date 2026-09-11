@@ -22,7 +22,7 @@ export default function Footer() {
           </nav>
         </div>
         <div className="pt-space-md border-t border-inverse-surface/40 dark:border-outline-variant/40 flex flex-col sm:flex-row justify-between items-center text-xs text-secondary-fixed-dim dark:text-secondary font-mono-eyebrow">
-          <span>© 2026 Wintech Agencia Digital. Sin costos ocultos.</span>
+          <span>© 2026 Winweb Agencia Digital.</span>
           <span className="mt-2 sm:mt-0">Diseñado con precisión táctil y velocidad nativa.</span>
         </div>
       </div>

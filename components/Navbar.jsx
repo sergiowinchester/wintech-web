@@ -6,7 +6,7 @@ export default function Navbar() {
           <div className="w-9 h-9 rounded-xl bg-primary-container flex items-center justify-center text-on-tertiary shadow-sm transition-transform group-hover:scale-105">
             <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>terminal</span>
           </div>
-          <span>Wintech</span>
+          <span>Winweb</span>
         </a>
         <nav className="hidden md:flex items-center space-x-8">
           <a className="text-primary dark:text-primary-container font-label-btn border-b-2 border-primary dark:border-primary-container pb-1 transition-all duration-150 active:translate-y-px" href="#inicio">Inicio</a>

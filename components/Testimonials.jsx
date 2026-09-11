@@ -22,7 +22,7 @@ export default function Testimonials() {
                 ))}
               </div>
               <p className="font-body-default text-body-default text-on-surface mb-space-md italic">
-                "Antes perdíamos decenas de ventas por responder tarde en Instagram y WhatsApp. Wintech nos armó el catálogo y el bot responde precios, compatibilidades y toma el pedido al instante."
+                "Antes perdíamos decenas de ventas por responder tarde en Instagram y WhatsApp. winweb nos armó el catálogo y el bot responde precios, compatibilidades y toma el pedido al instante."
               </p>
             </div>
             <div className="flex items-center gap-3 pt-space-md border-t border-outline-variant/60">

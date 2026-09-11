@@ -6,9 +6,9 @@ export default function WhatsAppFab() {
         <span>¡Escríbenos por WhatsApp!</span>
       </div>
       <a 
-        aria-label="WhatsApp Wintech" 
+        aria-label="WhatsApp winweb" 
         className="relative flex items-center justify-center w-14 h-14 bg-[#25D366] hover:bg-[#20bd5a] text-white rounded-full tactile-shadow transition-transform duration-150 active:scale-95 group-hover:-translate-y-1" 
-        href="https://wa.me/5491140442803?text=Hola%20Wintech,%20quiero%20información%20sobre%20sus%20servicios" 
+        href="https://wa.me/5491140442803?text=Hola%20winweb,%20quiero%20información%20sobre%20sus%20servicios" 
         target="_blank" 
         rel="noopener noreferrer"
       >
