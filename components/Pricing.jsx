@@ -69,7 +69,7 @@ export default function Pricing() {
 
             <a 
               className="w-full text-center bg-surface-container-low hover:bg-surface-container text-on-surface font-label-btn text-label-btn py-3 rounded-xl border border-outline transition-colors flex items-center justify-center gap-2" 
-              href="https://wa.me/5491159911591?text=Hola%20winweb%20estoy%20interesado%20en%20el%20plan%20Esencial" 
+              href="https://wa.me/5491140442803?text=Hola%20winweb%20estoy%20interesado%20en%20el%20plan%20Esencial" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -138,7 +138,7 @@ export default function Pricing() {
 
             <a 
               className="w-full text-center bg-primary-container hover:bg-surface-tint text-on-tertiary font-label-btn text-label-btn py-3.5 rounded-xl border border-primary transition-all duration-150 tactile-shadow-sm font-bold active:translate-y-0.5 flex items-center justify-center gap-2" 
-              href="https://wa.me/5491159911591?text=Hola%20winweb%20estoy%20interesado%20en%20el%20plan%20Crecimiento" 
+              href="https://wa.me/5491140442803?text=Hola%20winweb%20estoy%20interesado%20en%20el%20plan%20Crecimiento" 
               target="_blank" 
               rel="noopener noreferrer"
             >
@@ -204,7 +204,7 @@ export default function Pricing() {
 
             <a 
               className="w-full text-center bg-surface-container-low hover:bg-surface-container text-on-surface font-label-btn text-label-btn py-3 rounded-xl border border-outline transition-colors flex items-center justify-center gap-2" 
-              href="https://wa.me/5491159911591?text=Hola%20winweb%20estoy%20interesado%20en%20el%20plan%20Élite" 
+              href="https://wa.me/5491140442803?text=Hola%20winweb%20estoy%20interesado%20en%20el%20plan%20Élite" 
               target="_blank" 
               rel="noopener noreferrer"
             >

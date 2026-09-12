@@ -22,7 +22,7 @@ export default function Hero() {
               <span className="material-symbols-outlined">payments</span>
               <span>Ver Planes y Precios</span>
             </a>
-            <a className="inline-flex justify-center items-center gap-2 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-label-btn text-label-btn px-6 py-3.5 rounded-xl border border-outline transition-all duration-150" href="https://wa.me/5491100000000?text=Hola%20Wintech,%20deseo%20hablar%20con%20un%20asesor" rel="noopener noreferrer" target="_blank">
+            <a className="inline-flex justify-center items-center gap-2 bg-surface-container-lowest hover:bg-surface-container-low text-on-surface font-label-btn text-label-btn px-6 py-3.5 rounded-xl border border-outline transition-all duration-150" href="https://wa.me/5491140442803?text=Hola%20Wintech,%20deseo%20hablar%20con%20un%20asesor" rel="noopener noreferrer" target="_blank">
               <span className="material-symbols-outlined text-tertiary">forum</span>
               <span>Hablar con un Asesor</span>
             </a>
